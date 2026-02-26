@@ -11,25 +11,25 @@
 html { scroll-behavior:smooth; }
 
 body{
-  background: url('fundo-tech.png') no-repeat center center fixed;
+  background: url('fundo-tech.jpg') no-repeat center center fixed;
   background-size: cover;
   background-color:#0f0a1c;
 }
 
-/* Overlay melhorado (menos opacidade) */
+/* Overlay escuro para legibilidade */
 body::before{
   content:"";
   position:fixed;
   inset:0;
-  background:rgba(8,6,18,.55);
+  background:rgba(10,8,20,.75);
   z-index:-1;
 }
 
-/* Glass com contraste melhor */
+/* Glass */
 .glass{
-  background:rgba(20,15,40,.75);
-  backdrop-filter:blur(14px);
-  border:1px solid rgba(255,255,255,.08);
+  background:rgba(15,10,28,.85);
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,.05);
 }
 
 /* Botões */
@@ -46,9 +46,9 @@ body::before{
 
 /* Cards */
 .card{
-  background:rgba(32,20,60,.75);
-  backdrop-filter:blur(10px);
-  border:1px solid rgba(182,140,255,.20);
+  background:rgba(28,18,46,.85);
+  backdrop-filter:blur(8px);
+  border:1px solid rgba(182,140,255,.15);
   transition:.3s;
 }
 .card:hover{
@@ -64,17 +64,12 @@ body::before{
 }
 .slide.active{ opacity:1; }
 
-/* Melhor ajuste das imagens */
-.slide img{
-  filter:brightness(.85) contrast(1.1);
-}
-
 /* Indicadores */
 .dot{
   width:10px;
   height:10px;
   border-radius:50%;
-  background:#666;
+  background:#555;
   cursor:pointer;
 }
 .dot.active{ background:#6EEB83; }
@@ -93,7 +88,6 @@ body::before{
   align-items:center;
   justify-content:center;
   cursor:pointer;
-  font-weight:bold;
 }
 
 /* Whats */
@@ -119,6 +113,7 @@ body::before{
 <!-- HEADER -->
 <header class="fixed w-full glass z-50">
 <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
 <div>
 <h1 class="text-lg font-bold text-green-400">GnomooTech</h1>
 <span class="text-xs text-gray-400">Suporte Técnico & Hospedagem</span>
@@ -131,6 +126,7 @@ body::before{
 <a href="#sobre">Sobre</a>
 <a href="#contato">Contato</a>
 </nav>
+
 </div>
 </header>
 
@@ -178,83 +174,85 @@ Solicitar Orçamento
 
 </section>
 
-<!-- SERVIÇOS -->
+<!-- SERVIÇOS COMPLETOS -->
 <section id="servicos" class="py-24 max-w-6xl mx-auto px-6 text-center">
 <h2 class="text-4xl font-bold text-green-400 mb-16">Serviços</h2>
 
 <div class="grid md:grid-cols-3 gap-8">
 
-<a href="#upgrade-ssd" class="card p-6 rounded-xl block">
+<div class="card p-6 rounded-xl">
 <h3 class="text-lg mb-3">Upgrade SSD</h3>
 <p>Notebook, PC e Consoles.</p>
-</a>
+</div>
 
-<a href="#limpeza-console" class="card p-6 rounded-xl block">
+<div class="card p-6 rounded-xl">
 <h3 class="text-lg mb-3">Limpeza Console</h3>
 <p>Troca pasta térmica e manutenção preventiva.</p>
-</a>
+</div>
 
-<a href="#hd-externo" class="card p-6 rounded-xl block">
+<div class="card p-6 rounded-xl">
 <h3 class="text-lg mb-3">HD Externo</h3>
-<p>Preparação personalizada.</p>
-</a>
+<p>Preparação e organização personalizada.</p>
+</div>
 
-<a href="#formatacao" class="card p-6 rounded-xl block">
+<div class="card p-6 rounded-xl">
 <h3 class="text-lg mb-3">Formatação Completa</h3>
-<p>Drivers e otimização.</p>
-</a>
+<p>Drivers, atualizações e otimização.</p>
+</div>
 
-<a href="#linux" class="card p-6 rounded-xl block">
+<div class="card p-6 rounded-xl">
 <h3 class="text-lg mb-3">Servidores Linux</h3>
 <p>Deploy e configuração VPS.</p>
-</a>
+</div>
 
-<a href="#hospedagem" class="card p-6 rounded-xl block">
-<h3 class="text-lg mb-3">Hospedagem</h3>
+<div class="card p-6 rounded-xl">
+<h3 class="text-lg mb-3">Hospedagem de Sites</h3>
 <p>Planos profissionais mensais.</p>
+</div>
+
+</div>
+</section>
+
+<!-- TABELA DE VALORES RESTAURADA -->
+<section id="valores" class="py-24 max-w-6xl mx-auto px-6">
+<h2 class="text-4xl text-center font-bold text-purple-300 mb-16">
+Tabela de Valores
+</h2>
+
+<div class="overflow-x-auto">
+<table class="w-full border border-gray-700 bg-[#1c122e]">
+<tr>
+<th class="p-4 border">Serviço</th>
+<th class="p-4 border">Valor</th>
+</tr>
+<tr><td class="p-4 border">Upgrade SSD</td><td class="p-4 border">A partir R$320</td></tr>
+<tr><td class="p-4 border">Console SSD</td><td class="p-4 border">A partir R$380</td></tr>
+<tr><td class="p-4 border">Limpeza Console</td><td class="p-4 border">R$150</td></tr>
+<tr><td class="p-4 border">Formatação</td><td class="p-4 border">R$150</td></tr>
+<tr><td class="p-4 border">HD Externo</td><td class="p-4 border">R$180</td></tr>
+<tr><td class="p-4 border">Hospedagem Essencial</td><td class="p-4 border">R$39/mês</td></tr>
+<tr><td class="p-4 border">Hospedagem Profissional</td><td class="p-4 border">R$79/mês</td></tr>
+</table>
+</div>
+</section>
+
+<!-- SOBRE COMPLETO -->
+<section id="sobre" class="py-24 max-w-4xl mx-auto text-center px-6">
+<h2 class="text-4xl font-bold text-green-400 mb-8">Sobre a GnomooTech</h2>
+<p class="text-gray-400">
+A GnomooTech nasceu da paixão por tecnologia e da vontade de entregar
+serviços rápidos, profissionais e com garantia. Trabalhamos com upgrade,
+consoles, servidores e hospedagem, sempre com foco em qualidade e transparência.
+</p>
+</section>
+
+<!-- CONTATO -->
+<section id="contato" class="py-24 text-center">
+<h2 class="text-3xl font-bold mb-6">Entre em Contato</h2>
+<a href="https://wa.me/SEUNUMEROAQUI" class="btn-green px-12 py-4 rounded-full">
+Falar no WhatsApp
 </a>
-
-</div>
 </section>
-
-<!-- EXPLICAÇÕES DETALHADAS -->
-<section class="py-24 max-w-5xl mx-auto px-6 space-y-20">
-
-<div id="upgrade-ssd">
-<h2 class="text-2xl font-bold text-green-400 mb-4">Upgrade SSD</h2>
-<p>Inicialização mais rápida, menos travamentos e maior durabilidade do sistema.</p>
-</div>
-
-<div id="limpeza-console">
-<h2 class="text-2xl font-bold text-green-400 mb-4">Limpeza Console</h2>
-<p>Reduz superaquecimento e evita danos internos.</p>
-</div>
-
-<div id="hd-externo">
-<h2 class="text-2xl font-bold text-green-400 mb-4">HD Externo</h2>
-<p>Organização profissional e melhor compatibilidade.</p>
-</div>
-
-<div id="formatacao">
-<h2 class="text-2xl font-bold text-green-400 mb-4">Formatação Completa</h2>
-<p>Instalação limpa, drivers corretos e sistema otimizado.</p>
-</div>
-
-<div id="linux">
-<h2 class="text-2xl font-bold text-green-400 mb-4">Servidores Linux</h2>
-<p>Configuração segura e profissional.</p>
-</div>
-
-<div id="hospedagem">
-<h2 class="text-2xl font-bold text-green-400 mb-4">Hospedagem</h2>
-<p>Estabilidade, monitoramento e suporte técnico.</p>
-</div>
-
-</section>
-
-<!-- TABELA DE VALORES (mantida) -->
-<!-- SOBRE (mantido) -->
-<!-- CONTATO (mantido) -->
 
 <footer class="py-8 text-center text-gray-400 text-sm">
 © 2026 GnomooTech
@@ -267,13 +265,21 @@ Solicitar Orçamento
 let slides=document.querySelectorAll('.slide');
 let dots=document.querySelectorAll('.dot');
 let current=0;
-function showSlide(i){slides.forEach(s=>s.classList.remove('active'));dots.forEach(d=>d.classList.remove('active'));slides[i].classList.add('active');dots[i].classList.add('active');current=i;}
+
+function showSlide(i){
+slides.forEach(s=>s.classList.remove('active'));
+dots.forEach(d=>d.classList.remove('active'));
+slides[i].classList.add('active');
+dots[i].classList.add('active');
+current=i;
+}
 function setSlide(i){showSlide(i);}
 setInterval(()=>{current=(current+1)%slides.length;showSlide(current)},5000);
 
 const topBtn=document.getElementById("topBtn");
 window.addEventListener("scroll",()=>{
-if(window.scrollY>300){topBtn.style.display="flex"}else{topBtn.style.display="none"}
+if(window.scrollY>300){topBtn.style.display="flex"}
+else{topBtn.style.display="none"}
 });
 topBtn.onclick=()=>window.scrollTo({top:0,behavior:"smooth"});
 </script>
