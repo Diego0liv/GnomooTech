@@ -3,257 +3,220 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GnomooTech | Suporte Técnico Profissional</title>
-<meta name="description" content="Upgrade SSD, manutenção de PCs, consoles, servidores Linux e hospedagem profissional.">
+
+<title>GnomooTech | Suporte Gamer & Tecnologia</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
 
 <style>
-html { scroll-behavior: smooth; }
-body { background: #120a1f; }
 
-.tech-green { color: #6EEB83; }
-.tech-purple { color: #b68cff; }
+html { scroll-behavior:smooth; }
 
-.tech-button {
-  background: #6EEB83;
-  color: #0f051d;
-  font-weight: 600;
-  transition: 0.3s;
-}
-.tech-button:hover {
-  background: #7cf59a;
-  transform: translateY(-2px);
+body{
+  background:
+  url('fundo-tech.jpg') no-repeat center center fixed;
+  background-size:cover;
+  background-blend-mode:overlay;
+  background-color:#0f0a1c;
 }
 
-.tech-card {
-  background: #1c122e;
-  border: 1px solid rgba(182, 140, 255, 0.15);
+/* vidro */
+.glass{
+  background:rgba(15,10,28,.75);
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,.05);
 }
 
-.whatsapp-float {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  width: 60px;
-  height: 60px;
-  background: #25D366;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 24px;
-  z-index: 999;
+/* Botão */
+.btn-green{
+  background:#6EEB83;
+  color:#000;
+  font-weight:600;
+  transition:.3s;
+}
+.btn-green:hover{
+  transform:translateY(-3px);
+  background:#7cf59a;
 }
 
-.top-button {
-  position: fixed;
-  bottom: 100px;
-  right: 25px;
-  width: 50px;
-  height: 50px;
-  background: #6EEB83;
-  color: #000;
-  border-radius: 50%;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+/* Cards */
+.card{
+  background:rgba(28,18,46,.8);
+  backdrop-filter:blur(8px);
+  border:1px solid rgba(182,140,255,.15);
+  transition:.3s;
 }
+.card:hover{
+  transform:translateY(-8px);
+}
+
+/* Carousel */
+.slide{
+  position:absolute;
+  inset:0;
+  opacity:0;
+  transition:opacity .6s ease;
+}
+.slide.active{ opacity:1; }
+
+/* Indicadores */
+.dot{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:#555;
+  cursor:pointer;
+}
+.dot.active{ background:#6EEB83; }
+
+/* Whats */
+.whats{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  width:60px;
+  height:60px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-size:24px;
+}
+
 </style>
 </head>
 
 <body class="text-gray-200 font-sans">
 
 <!-- HEADER -->
-<header class="fixed w-full bg-[#120a1fe6] backdrop-blur-md shadow-md z-50">
-<nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+<header class="fixed w-full glass z-50">
+<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
 <div>
-<span class="tech-green font-bold text-xl">GnomooTech</span>
-<p class="text-xs text-gray-400">Suporte Técnico & Hospedagem</p>
+<h1 class="text-lg font-bold text-green-400">GnomooTech</h1>
+<span class="text-xs text-gray-400">Suporte Gamer & Tecnologia</span>
 </div>
 
-<div class="flex space-x-6 text-sm">
-<a href="#inicio">Home</a>
+<nav class="space-x-6 text-sm">
 <a href="#servicos">Serviços</a>
-<a href="#valores">Valores</a>
 <a href="#sobre">Sobre</a>
 <a href="#contato">Contato</a>
-</div>
-
 </nav>
+
+</div>
 </header>
 
-<div id="inicio" class="pt-32"></div>
+<!-- HERO CARROSSEL -->
+<section class="pt-32 pb-24 relative">
 
-<!-- HERO -->
-<section class="text-center py-24 px-6 max-w-4xl mx-auto">
-<h1 class="text-4xl md:text-6xl font-bold tech-green mb-6">
-Notebook ou PC Lento?<br>Até 5x Mais Rápido em 24h.
-</h1>
+<div class="relative h-[450px] max-w-5xl mx-auto">
 
-<p class="text-xl tech-purple mb-10">
-Upgrade SSD, manutenção profissional e serviços para consoles.
-</p>
-
-<a href="https://wa.me/SEUNUMEROAQUI"
-class="tech-button px-12 py-4 rounded-full">
+<!-- SLIDE 1 -->
+<div class="slide active rounded-3xl overflow-hidden">
+<img src="ssd.jpg" class="w-full h-full object-cover">
+<div class="absolute inset-0 glass flex flex-col items-center justify-center text-center p-6">
+<h2 class="text-5xl font-bold text-green-400 mb-6">Upgrade SSD Gamer</h2>
+<p class="text-xl text-purple-300 mb-8">Até 5x mais velocidade e desempenho.</p>
+<a href="#contato" class="btn-green px-10 py-4 rounded-full">
 Solicitar Orçamento
 </a>
+</div>
+</div>
+
+<!-- SLIDE 2 -->
+<div class="slide rounded-3xl overflow-hidden">
+<img src="console.jpg" class="w-full h-full object-cover">
+<div class="absolute inset-0 glass flex flex-col items-center justify-center text-center p-6">
+<h2 class="text-5xl font-bold text-green-400 mb-6">Consoles PS4 / Xbox</h2>
+<p class="text-xl text-purple-300 mb-8">Limpeza e troca HD por SSD.</p>
+</div>
+</div>
+
+<!-- SLIDE 3 -->
+<div class="slide rounded-3xl overflow-hidden">
+<img src="hdexterno.jpg" class="w-full h-full object-cover">
+<div class="absolute inset-0 glass flex flex-col items-center justify-center text-center p-6">
+<h2 class="text-5xl font-bold text-green-400 mb-6">HD Externo Customizado</h2>
+<p class="text-xl text-purple-300">Preparação e organização profissional.</p>
+</div>
+</div>
+
+</div>
+
+<!-- Indicadores -->
+<div class="flex justify-center mt-6 space-x-3">
+<div class="dot active" onclick="setSlide(0)"></div>
+<div class="dot" onclick="setSlide(1)"></div>
+<div class="dot" onclick="setSlide(2)"></div>
+</div>
+
 </section>
 
-<hr class="border-gray-800">
-
 <!-- SERVIÇOS -->
-<section id="servicos" class="py-24 max-w-6xl mx-auto px-6">
-<h2 class="text-4xl text-center font-bold tech-green mb-16">
-Serviços
-</h2>
+<section id="servicos" class="py-20 max-w-6xl mx-auto px-6 text-center">
+<h2 class="text-4xl font-bold text-green-400 mb-12">Especialidades</h2>
 
 <div class="grid md:grid-cols-3 gap-10">
 
-<div class="tech-card p-8 rounded-xl text-center">
-<h3 class="text-xl mb-4">💾 Upgrade SSD</h3>
-<p>Substituição de HD por SSD para Notebook, PC e Consoles.</p>
+<div class="card p-6 rounded-xl">
+<img src="ssd.jpg" class="rounded-lg mb-4">
+<h3 class="text-xl mb-2">Upgrade SSD</h3>
+<p>Instalação profissional.</p>
 </div>
 
-<div class="tech-card p-8 rounded-xl text-center">
-<h3 class="text-xl mb-4">🧼 Limpeza de Consoles</h3>
-<p>Limpeza interna completa e troca de pasta térmica.</p>
+<div class="card p-6 rounded-xl">
+<img src="console.jpg" class="rounded-lg mb-4">
+<h3 class="text-xl mb-2">Consoles</h3>
+<p>Limpeza e otimização.</p>
 </div>
 
-<div class="tech-card p-8 rounded-xl text-center">
-<h3 class="text-xl mb-4">🎮 Troca HD por SSD (Console)</h3>
-<p>Melhoria de desempenho para PS4 e Xbox.</p>
-</div>
-
-<div class="tech-card p-8 rounded-xl text-center">
-<h3 class="text-xl mb-4">🔌 HD Externo Configurado</h3>
-<p>Preparação e organização de HD externo para jogos do cliente.</p>
-</div>
-
-<div class="tech-card p-8 rounded-xl text-center">
-<h3 class="text-xl mb-4">🖥 Formatação Completa</h3>
-<p>Formatação com drivers, atualizações e otimização.</p>
-</div>
-
-<div class="tech-card p-8 rounded-xl text-center">
-<h3 class="text-xl mb-4">🌐 Hospedagem & Servidores</h3>
-<p>Linux, VPS e hospedagem de sites profissionais.</p>
+<div class="card p-6 rounded-xl">
+<img src="hdexterno.jpg" class="rounded-lg mb-4">
+<h3 class="text-xl mb-2">HD Externo</h3>
+<p>Configuração personalizada.</p>
 </div>
 
 </div>
 </section>
 
-<hr class="border-gray-800">
-
-<!-- TABELA DE VALORES -->
-<section id="valores" class="py-24 max-w-6xl mx-auto px-6">
-<h2 class="text-4xl text-center font-bold tech-purple mb-16">
-Tabela de Valores
-</h2>
-
-<div class="overflow-x-auto">
-<table class="w-full text-left border border-gray-700">
-<thead class="bg-[#1c122e]">
-<tr>
-<th class="p-4 border">Serviço</th>
-<th class="p-4 border">Valor</th>
-</tr>
-</thead>
-
-<tbody>
-
-<tr>
-<td class="p-4 border">Upgrade SSD (PC/Notebook)</td>
-<td class="p-4 border">A partir de R$320</td>
-</tr>
-
-<tr>
-<td class="p-4 border">Troca HD por SSD (Console)</td>
-<td class="p-4 border">A partir de R$380</td>
-</tr>
-
-<tr>
-<td class="p-4 border">Limpeza Interna Console</td>
-<td class="p-4 border">R$150</td>
-</tr>
-
-<tr>
-<td class="p-4 border">Formatação Completa</td>
-<td class="p-4 border">R$150</td>
-</tr>
-
-<tr>
-<td class="p-4 border">Configuração HD Externo (Cliente fornece HD)</td>
-<td class="p-4 border">R$180</td>
-</tr>
-
-<tr>
-<td class="p-4 border">Hospedagem Essencial</td>
-<td class="p-4 border">R$39/mês</td>
-</tr>
-
-<tr>
-<td class="p-4 border">Hospedagem Profissional</td>
-<td class="p-4 border">R$79/mês</td>
-</tr>
-
-</tbody>
-</table>
-</div>
-</section>
-
-<hr class="border-gray-800">
-
-<!-- SOBRE -->
-<section id="sobre" class="py-24 max-w-5xl mx-auto px-6 text-center">
-<h2 class="text-4xl font-bold tech-green mb-10">
-Sobre a GnomooTech
-</h2>
+<section id="sobre" class="py-20 text-center max-w-3xl mx-auto">
+<h2 class="text-4xl font-bold text-green-400 mb-6">Sobre</h2>
 <p class="text-gray-400">
-A GnomooTech nasceu da paixão por tecnologia e da vontade de ajudar
-pessoas e empresas a resolverem seus problemas digitais com transparência,
-qualidade e profissionalismo.
+Especialistas em performance e tecnologia gamer.
 </p>
 </section>
 
-<hr class="border-gray-800">
-
-<!-- CONTATO -->
-<section id="contato" class="py-24 text-center">
-<h2 class="text-3xl font-bold tech-purple mb-6">
-Entre em Contato
-</h2>
+<section id="contato" class="py-20 text-center">
+<h2 class="text-3xl font-bold mb-6">Fale Conosco</h2>
 <a href="https://wa.me/SEUNUMEROAQUI"
-class="tech-button px-12 py-4 rounded-full">
-Falar no WhatsApp
+class="btn-green px-12 py-4 rounded-full">
+WhatsApp
 </a>
 </section>
 
-<footer class="py-10 text-center text-gray-500 text-sm">
-© 2026 GnomooTech • Todos os direitos reservados
-</footer>
-
-<div id="topBtn" class="top-button">↑</div>
-<a href="https://wa.me/SEUNUMEROAQUI" class="whatsapp-float">💬</a>
+<a href="https://wa.me/SEUNUMEROAQUI" class="whats">💬</a>
 
 <script>
-const topBtn = document.getElementById("topBtn");
+let slides = document.querySelectorAll('.slide');
+let dots = document.querySelectorAll('.dot');
+let current = 0;
 
-window.addEventListener("scroll", () => {
-  if (document.documentElement.scrollTop > 300) {
-    topBtn.style.display = "flex";
-  } else {
-    topBtn.style.display = "none";
-  }
-});
+function showSlide(i){
+slides.forEach(s=>s.classList.remove('active'));
+dots.forEach(d=>d.classList.remove('active'));
+slides[i].classList.add('active');
+dots[i].classList.add('active');
+current=i;
+}
 
-topBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
+function setSlide(i){ showSlide(i); }
+
+setInterval(()=>{
+current = (current+1) % slides.length;
+showSlide(current);
+},5000);
 </script>
 
 </body>
