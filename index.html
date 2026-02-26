@@ -1,55 +1,226 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GnomoTech - Soluções em Tecnologia</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GnomooTech | Suporte Técnico Profissional</title>
+<meta name="description" content="Upgrade SSD, manutenção, servidores Linux e hospedagem profissional.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+html { scroll-behavior: smooth; }
+body { background: #120a1f; }
+
+.tech-green { color: #6EEB83; }
+.tech-purple { color: #b68cff; }
+
+.tech-button {
+  background: #6EEB83;
+  color: #0f051d;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.tech-button:hover {
+  background: #7cf59a;
+  transform: translateY(-2px);
+}
+
+.tech-card {
+  background: #1c122e;
+  border: 1px solid rgba(182, 140, 255, 0.15);
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  z-index: 999;
+}
+
+.top-button {
+  position: fixed;
+  bottom: 100px;
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  background: #6EEB83;
+  color: #000;
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+</style>
 </head>
-<body class="bg-gray-900 text-white font-sans">
 
-  <!-- Header -->
-  <header class="bg-gray-800 p-4 flex justify-between items-center shadow-lg">
-    <h1 class="text-2xl font-bold text-green-400">GnomoTech</h1>
-    <nav>
-      <a href="index.html" class="mx-2 hover:text-green-400">Home</a>
-      <a href="serviços.html" class="mx-2 hover:text-green-400">Serviços</a>
-      <a href="sobre.html" class="mx-2 hover:text-green-400">Sobre</a>
-      <a href="contato.html" class="mx-2 hover:text-green-400">Contato</a>
-    </nav>
-  </header>
+<body class="text-gray-200 font-sans">
 
-  <!-- Hero -->
-  <section class="text-center py-20 px-4">
-    <h2 class="text-4xl font-extrabold mb-4">Tecnologia sob medida</h2>
-    <p class="text-xl mb-6 text-gray-300">Da manutenção ao digital, resolvemos tudo com eficiência.</p>
-    <a href="https://wa.me/556182025596" target="_blank" class="bg-green-500 text-black px-6 py-3 rounded-lg hover:bg-green-600 transition">
-      Solicitar Orçamento no WhatsApp
-    </a>
-  </section>
-  
-  <!--Contator -->
-  <p style="color: #ccc; text-align: center; margin-top: 20px;">
-  👀 Visitantes no site: <span id="visitor-counter">carregando...</span>
+<!-- HEADER -->
+<header class="fixed w-full bg-[#120a1fe6] backdrop-blur-md shadow-md z-50">
+<nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+<div>
+<span class="tech-green font-bold text-xl">GnomooTech</span>
+<p class="text-xs text-gray-400">Suporte Técnico & Hospedagem</p>
+</div>
+
+<!-- MENU DESKTOP SEM ESCONDER -->
+<div class="flex space-x-6 text-sm">
+<a href="#inicio">Home</a>
+<a href="#servicos">Serviços</a>
+<a href="#valores">Valores</a>
+<a href="#sobre">Sobre</a>
+<a href="#contato">Contato</a>
+</div>
+
+</nav>
+</header>
+
+<div id="inicio" class="pt-32"></div>
+
+<!-- HERO -->
+<section class="text-center py-24 px-6 max-w-4xl mx-auto">
+<h1 class="text-4xl md:text-6xl font-bold tech-green mb-6">
+Notebook ou PC Lento?<br>Até 5x Mais Rápido em 24h.
+</h1>
+<p class="text-xl tech-purple mb-10">
+Upgrade SSD e manutenção profissional.
 </p>
+<a href="https://wa.me/SEUNUMEROAQUI"
+class="tech-button px-12 py-4 rounded-full">
+Solicitar Orçamento
+</a>
+</section>
+
+<hr class="border-gray-800">
+
+<!-- SERVIÇOS -->
+<section id="servicos" class="py-24 max-w-6xl mx-auto px-6">
+<h2 class="text-4xl text-center font-bold tech-green mb-16">
+Serviços
+</h2>
+
+<div class="grid md:grid-cols-3 gap-10">
+<div class="tech-card p-8 rounded-xl text-center">
+<h3 class="text-xl mb-4">Upgrade SSD</h3>
+<p>Instalação profissional com sistema otimizado.</p>
+</div>
+
+<div class="tech-card p-8 rounded-xl text-center">
+<h3 class="text-xl mb-4">Manutenção</h3>
+<p>Formatação, limpeza e upgrade.</p>
+</div>
+
+<div class="tech-card p-8 rounded-xl text-center">
+<h3 class="text-xl mb-4">Servidores & Hospedagem</h3>
+<p>Linux, VPS e sites profissionais.</p>
+</div>
+</div>
+</section>
+
+<hr class="border-gray-800">
+
+<!-- TABELA DE VALORES -->
+<section id="valores" class="py-24 max-w-6xl mx-auto px-6">
+<h2 class="text-4xl text-center font-bold tech-purple mb-16">
+Tabela de Valores
+</h2>
+
+<div class="overflow-x-auto">
+<table class="w-full text-left border border-gray-700">
+<thead class="bg-[#1c122e]">
+<tr>
+<th class="p-4 border">Serviço</th>
+<th class="p-4 border">Valor</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class="p-4 border">Upgrade SSD</td>
+<td class="p-4 border">A partir de R$320</td>
+</tr>
+<tr>
+<td class="p-4 border">Formatação Completa</td>
+<td class="p-4 border">R$150</td>
+</tr>
+<tr>
+<td class="p-4 border">Limpeza Interna</td>
+<td class="p-4 border">R$120</td>
+</tr>
+<tr>
+<td class="p-4 border">Hospedagem Essencial</td>
+<td class="p-4 border">R$39/mês</td>
+</tr>
+<tr>
+<td class="p-4 border">Hospedagem Profissional</td>
+<td class="p-4 border">R$79/mês</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<hr class="border-gray-800">
+
+<!-- SOBRE -->
+<section id="sobre" class="py-24 max-w-5xl mx-auto px-6 text-center">
+<h2 class="text-4xl font-bold tech-green mb-10">
+Sobre a GnomooTech
+</h2>
+<p class="text-gray-400">
+A GnomooTech nasceu da paixão por tecnologia e da vontade de ajudar
+pessoas e empresas a resolverem seus problemas digitais com transparência,
+qualidade e profissionalismo.
+</p>
+</section>
+
+<hr class="border-gray-800">
+
+<!-- CONTATO -->
+<section id="contato" class="py-24 text-center">
+<h2 class="text-3xl font-bold tech-purple mb-6">
+Entre em Contato
+</h2>
+<a href="https://wa.me/SEUNUMEROAQUI"
+class="tech-button px-12 py-4 rounded-full">
+Falar no WhatsApp
+</a>
+</section>
+
+<footer class="py-10 text-center text-gray-500 text-sm">
+© 2026 GnomooTech • Todos os direitos reservados
+</footer>
+
+<div id="topBtn" class="top-button">↑</div>
+<a href="https://wa.me/SEUNUMEROAQUI" class="whatsapp-float">💬</a>
 
 <script>
-  fetch('https://api.countapi.xyz/hit/gnomotech.com.br/visits')
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById('visitor-counter').innerText = data.value;
-    });
+const topBtn = document.getElementById("topBtn");
+
+window.addEventListener("scroll", () => {
+  if (document.documentElement.scrollTop > 300) {
+    topBtn.style.display = "flex";
+  } else {
+    topBtn.style.display = "none";
+  }
+});
+
+topBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
 </script>
 
-
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-center p-4 text-sm text-gray-400">
-    © 2025 GnomoTech. Todos os direitos reservados.
-    <p>Brasilia–DF</p>
-  </footer>
 </body>
 </html>
-
-
-
