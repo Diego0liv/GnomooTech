@@ -122,26 +122,62 @@ body{
 
 <div id="inicio" class="pt-40 md:pt-32"></div>
 
-<!-- HERO -->
+<!-- HERO CARROSSEL -->
 <section class="pb-20 relative">
+
 <div class="relative h-[280px] sm:h-[350px] md:h-[450px] max-w-5xl mx-auto px-4">
 
+<!-- SLIDE 1 -->
 <div class="slide active rounded-3xl overflow-hidden">
 <img src="ssd.png" class="w-full h-full object-cover">
 <div class="absolute inset-0 glass flex flex-col items-center justify-center text-center p-4 md:p-6">
-<h2 class="text-2xl sm:text-3xl md:text-5xl font-bold text-green-400 mb-4 md:mb-6">
+<h2 class="text-2xl sm:text-3xl md:text-5xl font-bold text-green-400 mb-4 md:mb-6 leading-tight">
 Upgrade SSD Gamer
 </h2>
 <p class="text-base sm:text-lg md:text-xl text-purple-300 mb-6">
 Até 5x mais velocidade e desempenho.
 </p>
-<a href="#contato" class="btn-green px-6 sm:px-10 py-3 md:py-4 rounded-full">
+<a href="#contato" class="btn-green px-6 sm:px-10 py-3 md:py-4 rounded-full text-sm sm:text-base">
 Solicitar Orçamento
 </a>
 </div>
 </div>
 
+<!-- SLIDE 2 -->
+<div class="slide rounded-3xl overflow-hidden">
+<img src="console.png" class="w-full h-full object-cover">
+<div class="absolute inset-0 glass flex flex-col items-center justify-center text-center p-4 md:p-6">
+<h2 class="text-2xl sm:text-3xl md:text-5xl font-bold text-green-400 mb-4 md:mb-6">
+Consoles PS4 / Xbox
+</h2>
+<p class="text-base sm:text-lg md:text-xl text-purple-300">
+Limpeza interna + Troca HD por SSD.
+</p>
 </div>
+</div>
+
+<!-- SLIDE 3 -->
+<div class="slide rounded-3xl overflow-hidden">
+<img src="hdexterno.png" class="w-full h-full object-cover">
+<div class="absolute inset-0 glass flex flex-col items-center justify-center text-center p-4 md:p-6">
+<h2 class="text-2xl sm:text-3xl md:text-5xl font-bold text-green-400 mb-4 md:mb-6">
+HD Externo Customizado
+</h2>
+<p class="text-base sm:text-lg md:text-xl text-purple-300">
+Instalação e configuração profissional.
+</p>
+</div>
+</div>
+
+</div>
+
+<!-- INDICADORES -->
+<div class="flex justify-center mt-6 space-x-3">
+<div class="dot active" onclick="setSlide(0)"></div>
+<div class="dot" onclick="setSlide(1)"></div>
+<div class="dot" onclick="setSlide(2)"></div>
+</div>
+
 </section>
 
 <!-- SERVIÇOS -->
@@ -234,4 +270,24 @@ Falar no WhatsApp
 <a href="https://wa.me/SEUNUMEROAQUI" class="whats">💬</a>
 
 </body>
+<script>
+let slides = document.querySelectorAll('.slide');
+let dots = document.querySelectorAll('.dot');
+let current = 0;
+
+function showSlide(i){
+  slides.forEach(s=>s.classList.remove('active'));
+  dots.forEach(d=>d.classList.remove('active'));
+  slides[i].classList.add('active');
+  dots[i].classList.add('active');
+  current = i;
+}
+
+function setSlide(i){ showSlide(i); }
+
+setInterval(()=>{
+  current = (current+1) % slides.length;
+  showSlide(current);
+},5000);
+</script>
 </html>
