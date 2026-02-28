@@ -17,8 +17,6 @@ body{
   background-size: cover;
 }
 
-
-
 /* Glass */
 .glass{
   background:rgba(15,10,28,.85);
@@ -45,9 +43,7 @@ body{
   border:1px solid rgba(182,140,255,.15);
   transition:.3s;
 }
-.card:hover{
-  transform:translateY(-8px);
-}
+.card:hover{ transform:translateY(-8px); }
 
 /* Carousel */
 .slide{
@@ -72,7 +68,7 @@ body{
 .top-btn{
   position:fixed;
   bottom:95px;
-  right:25px;
+  right:20px;
   width:45px;
   height:45px;
   background:#6EEB83;
@@ -88,16 +84,16 @@ body{
 .whats{
   position:fixed;
   bottom:25px;
-  right:25px;
-  width:60px;
-  height:60px;
+  right:20px;
+  width:55px;
+  height:55px;
   background:#25D366;
   border-radius:50%;
   display:flex;
   align-items:center;
   justify-content:center;
   color:white;
-  font-size:24px;
+  font-size:22px;
 }
 </style>
 </head>
@@ -106,14 +102,14 @@ body{
 
 <!-- HEADER -->
 <header class="fixed w-full glass z-50">
-<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+<div class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-3">
 
-<div>
+<div class="text-center md:text-left">
 <h1 class="text-lg font-bold text-green-400">GnomooTech</h1>
 <span class="text-xs text-gray-400">Suporte Técnico & Hospedagem</span>
 </div>
 
-<nav class="space-x-6 text-sm">
+<nav class="flex flex-wrap justify-center md:justify-end gap-4 text-sm">
 <a href="#inicio">Home</a>
 <a href="#servicos">Serviços</a>
 <a href="#valores">Valores</a>
@@ -124,55 +120,35 @@ body{
 </div>
 </header>
 
-<div id="inicio" class="pt-32"></div>
+<div id="inicio" class="pt-40 md:pt-32"></div>
 
-<!-- HERO CARROSSEL -->
-<section class="pb-24 relative">
-
-<div class="relative h-[450px] max-w-5xl mx-auto">
+<!-- HERO -->
+<section class="pb-20 relative">
+<div class="relative h-[280px] sm:h-[350px] md:h-[450px] max-w-5xl mx-auto px-4">
 
 <div class="slide active rounded-3xl overflow-hidden">
 <img src="ssd.png" class="w-full h-full object-cover">
-<div class="absolute inset-0 glass flex flex-col items-center justify-center text-center p-6">
-<h2 class="text-4xl md:text-5xl font-bold text-green-400 mb-6">Upgrade SSD Gamer</h2>
-<p class="text-xl text-purple-300 mb-8">Até 5x mais velocidade e desempenho.</p>
-<a href="#contato" class="btn-green px-10 py-4 rounded-full">
+<div class="absolute inset-0 glass flex flex-col items-center justify-center text-center p-4 md:p-6">
+<h2 class="text-2xl sm:text-3xl md:text-5xl font-bold text-green-400 mb-4 md:mb-6">
+Upgrade SSD Gamer
+</h2>
+<p class="text-base sm:text-lg md:text-xl text-purple-300 mb-6">
+Até 5x mais velocidade e desempenho.
+</p>
+<a href="#contato" class="btn-green px-6 sm:px-10 py-3 md:py-4 rounded-full">
 Solicitar Orçamento
 </a>
 </div>
 </div>
 
-<div class="slide rounded-3xl overflow-hidden">
-<img src="console.png" class="w-full h-full object-cover">
-<div class="absolute inset-0 glass flex flex-col items-center justify-center text-center p-6">
-<h2 class="text-4xl md:text-5xl font-bold text-green-400 mb-6">Consoles PS4 / Xbox</h2>
-<p class="text-xl text-purple-300 mb-8">Limpeza e troca HD por SSD.</p>
 </div>
-</div>
-
-<div class="slide rounded-3xl overflow-hidden">
-<img src="hdexterno.png" class="w-full h-full object-cover">
-<div class="absolute inset-0 glass flex flex-col items-center justify-center text-center p-6">
-<h2 class="text-4xl md:text-5xl font-bold text-green-400 mb-6">HD Externo Customizado</h2>
-<p class="text-xl text-purple-300">Instalação e configuração profissional.</p>
-</div>
-</div>
-
-</div>
-
-<div class="flex justify-center mt-6 space-x-3">
-<div class="dot active" onclick="setSlide(0)"></div>
-<div class="dot" onclick="setSlide(1)"></div>
-<div class="dot" onclick="setSlide(2)"></div>
-</div>
-
 </section>
 
-<!-- SERVIÇOS COMPLETOS -->
-<section id="servicos" class="py-24 max-w-6xl mx-auto px-6 text-center">
-<h2 class="text-4xl font-bold text-green-400 mb-16">Serviços</h2>
+<!-- SERVIÇOS -->
+<section id="servicos" class="py-20 max-w-6xl mx-auto px-4 md:px-6 text-center">
+<h2 class="text-3xl md:text-4xl font-bold text-green-400 mb-12">Serviços</h2>
 
-<div class="grid md:grid-cols-3 gap-8">
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
 
 <div class="card p-6 rounded-xl">
 <h3 class="text-lg mb-3">Upgrade SSD</h3>
@@ -207,79 +183,55 @@ Solicitar Orçamento
 </div>
 </section>
 
-<!-- TABELA DE VALORES RESTAURADA -->
-<section id="valores" class="py-24 max-w-6xl mx-auto px-6">
-<h2 class="text-4xl text-center font-bold text-purple-300 mb-16">
+<!-- TABELA DE VALORES -->
+<section id="valores" class="py-20 max-w-6xl mx-auto px-4 md:px-6">
+<h2 class="text-3xl md:text-4xl text-center font-bold text-purple-300 mb-12">
 Tabela de Valores
 </h2>
 
 <div class="overflow-x-auto">
-<table class="w-full border border-gray-700 bg-[#1c122e]">
+<table class="min-w-full border border-gray-700 bg-[#1c122e] text-sm sm:text-base">
 <tr>
-<th class="p-4 border">Serviço</th>
-<th class="p-4 border">Valor</th>
+<th class="p-3 border">Serviço</th>
+<th class="p-3 border">Valor</th>
 </tr>
-<tr><td class="p-4 border">Upgrade SSD</td><td class="p-4 border">A partir R$320</td></tr>
-<tr><td class="p-4 border">Console SSD</td><td class="p-4 border">A partir R$380</td></tr>
-<tr><td class="p-4 border">Limpeza Console</td><td class="p-4 border">R$150</td></tr>
-<tr><td class="p-4 border">Formatação</td><td class="p-4 border">R$150</td></tr>
-<tr><td class="p-4 border">HD Externo</td><td class="p-4 border">R$180</td></tr>
-<tr><td class="p-4 border">Hospedagem Essencial</td><td class="p-4 border">R$39/mês</td></tr>
-<tr><td class="p-4 border">Hospedagem Profissional</td><td class="p-4 border">R$79/mês</td></tr>
+<tr><td class="p-3 border">Upgrade SSD</td><td class="p-3 border">A partir R$320</td></tr>
+<tr><td class="p-3 border">Console SSD</td><td class="p-3 border">A partir R$380</td></tr>
+<tr><td class="p-3 border">Limpeza Console</td><td class="p-3 border">R$150</td></tr>
+<tr><td class="p-3 border">Formatação</td><td class="p-3 border">R$150</td></tr>
+<tr><td class="p-3 border">HD Externo</td><td class="p-3 border">R$180</td></tr>
+<tr><td class="p-3 border">Hospedagem Essencial</td><td class="p-3 border">R$39/mês</td></tr>
+<tr><td class="p-3 border">Hospedagem Profissional</td><td class="p-3 border">R$79/mês</td></tr>
 </table>
 </div>
 </section>
 
-<!-- SOBRE COMPLETO -->
-<section id="sobre" class="py-24 max-w-4xl mx-auto text-center px-6">
-<h2 class="text-4xl font-bold text-green-400 mb-8">Sobre a GnomooTech</h2>
-<p class="text-gray-400">
+<!-- SOBRE -->
+<section id="sobre" class="py-20 max-w-4xl mx-auto text-center px-4 md:px-6">
+<h2 class="text-3xl md:text-4xl font-bold text-green-400 mb-6">
+Sobre a GnomooTech
+</h2>
+<p class="text-gray-400 text-sm sm:text-base">
 A GnomooTech nasceu da paixão por tecnologia e da vontade de entregar
-serviços rápidos, profissionais e com garantia. Trabalhamos com upgrade,
-consoles, servidores e hospedagem, sempre com foco em qualidade e transparência.
+serviços rápidos, profissionais e com garantia.
 </p>
 </section>
 
 <!-- CONTATO -->
-<section id="contato" class="py-24 text-center">
-<h2 class="text-3xl font-bold mb-6">Entre em Contato</h2>
-<a href="https://wa.me/SEUNUMEROAQUI" class="btn-green px-12 py-4 rounded-full">
+<section id="contato" class="py-20 text-center px-4">
+<h2 class="text-2xl md:text-3xl font-bold mb-6">Entre em Contato</h2>
+<a href="https://wa.me/SEUNUMEROAQUI"
+class="btn-green px-6 sm:px-12 py-3 sm:py-4 rounded-full text-sm sm:text-base">
 Falar no WhatsApp
 </a>
 </section>
 
-<footer class="py-8 text-center text-gray-400 text-sm">
+<footer class="py-6 text-center text-gray-400 text-sm">
 © 2026 GnomooTech
 </footer>
 
 <div id="topBtn" class="top-btn">↑</div>
 <a href="https://wa.me/SEUNUMEROAQUI" class="whats">💬</a>
 
-<script>
-let slides=document.querySelectorAll('.slide');
-let dots=document.querySelectorAll('.dot');
-let current=0;
-
-function showSlide(i){
-slides.forEach(s=>s.classList.remove('active'));
-dots.forEach(d=>d.classList.remove('active'));
-slides[i].classList.add('active');
-dots[i].classList.add('active');
-current=i;
-}
-function setSlide(i){showSlide(i);}
-setInterval(()=>{current=(current+1)%slides.length;showSlide(current)},5000);
-
-const topBtn=document.getElementById("topBtn");
-window.addEventListener("scroll",()=>{
-if(window.scrollY>300){topBtn.style.display="flex"}
-else{topBtn.style.display="none"}
-});
-topBtn.onclick=()=>window.scrollTo({top:0,behavior:"smooth"});
-</script>
-
 </body>
 </html>
-
-
-
